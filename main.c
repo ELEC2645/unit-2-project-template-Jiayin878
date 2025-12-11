@@ -37,7 +37,7 @@ static void main_menu(void)
 
 static int get_user_input(void)
 {
-    enum { MENU_ITEMS = 5 };   /* 1..4 = items, 5 = Exit */
+    enum { MENU_ITEMS = 6 };   /* 1..5 = items, 5 = Exit */
     char buf[128];
     int valid_input = 0;
     int value = 0;
@@ -75,20 +75,26 @@ static void select_menu_item(int input)
     switch (input) {
         case 1:
             menu_item_1();
-            go_back_to_main();
+            
+            
             break;
         case 2:
-            menu_item_2();
-            go_back_to_main();
+            menu_item_1();
+            
             break;
         case 3:
             menu_item_3();
-            go_back_to_main();
+            
             break;
         case 4:
             menu_item_4();
-            go_back_to_main();
+            
             break;
+        case 5:
+            menu_item_5();
+            
+            break;
+        
         default:
             printf("Bye!\n");
             exit(0);
@@ -97,14 +103,16 @@ static void select_menu_item(int input)
 
 static void print_main_menu(void)
 {
-    printf("\n----------- Main menu -----------\n");
+
+    printf("\n----------- learning circuit by using AI-style assistant  -----------\n");
     printf("\n"
            "\t\t\t\t\t\t\n"
-           "\t1. Menu item 1\t\t\n"
-           "\t2. Menu item 2\t\t\n"
-           "\t3. Menu item 3\t\t\n"
-           "\t4. Menu item 4\t\t\n"
-           "\t5. Exit\t\t\t\t\n"
+           "\t1. Theory help\t\t\n"
+           "\t2. Ohm's Law Quiz 2\t\t\n"
+           "\t3. Series/Parallel Quiz 3\t\t\n"
+           "\t4. Voltage Divider Quiz 4\t\t\n"
+           "\t5. Circuit Calculator 5\t\t\n"
+           "\t6. Exit\t\t\t\t\n"
            "\t\t\t\t\t\t\n");
     printf("---------------------------------------------\n");
 }
